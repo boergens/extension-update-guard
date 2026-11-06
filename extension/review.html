@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Update Guard</title>
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+  <header>
+    <img src="icons/icon.svg" alt="" width="44" height="44">
+    <div>
+      <h1>Update Guard</h1>
+      <p id="status"></p>
+    </div>
+  </header>
+
+  <p id="notice" role="alert" hidden></p>
+
+  <main>
+    <section>
+      <h2>Waiting for review</h2>
+      <div id="waiting"></div>
+    </section>
+
+    <section>
+      <h2>Extensions</h2>
+      <p class="hint">Every update is turned off until you approve it, unless you choose otherwise here.</p>
+      <table>
+        <thead>
+          <tr><th>Extension</th><th>Version</th><th>State</th><th>When it updates</th></tr>
+        </thead>
+        <tbody id="extensions"></tbody>
+      </table>
+      <label class="setting">
+        <input type="checkbox" id="guard-unpacked">
+        Also hold unpacked (developer mode) extensions when their version changes
+      </label>
+    </section>
+
+    <section>
+      <h2>History</h2>
+      <ul id="history"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Update Guard acts after Chrome has installed an update, so a new version can run for a moment before it is
+      turned off. Chrome does not let one extension read another's code: to read it yourself, look in the
+      <code>Extensions/&lt;ID&gt;</code> folder inside your profile folder (the "Profile Path" on
+      <code>chrome://version</code>). After an update the old and the new version sit there side by side until
+      Chrome restarts, so that is the time to compare them.</p>
+  </footer>
+
+  <script type="module" src="review.js"></script>
+</body>
+</html>
