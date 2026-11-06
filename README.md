@@ -4,6 +4,10 @@ A Chrome extension that turns other extensions off when they update, tells you, 
 until you have reviewed and approved the new version. The point is to stop a hijacked or sold
 extension from running new code in your browser unnoticed.
 
+![Update Guard's review page: two extensions updated and were turned off. One asks for new permissions and site access, the other reports no visible change.](store/screenshots/1-updates-held.png)
+
+![The extension list with per-extension settings, and the history of updates and decisions.](store/screenshots/2-extension-list.png)
+
 ## Install
 
 1. Open `chrome://extensions` and turn on **Developer mode** (top right).
