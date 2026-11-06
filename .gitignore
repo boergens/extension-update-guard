@@ -1,6 +1,3 @@
-# Build output (the packaged extension is attached to GitHub Releases, not committed)
-dist/
-
 # Python
 __pycache__/
 *.pyc
